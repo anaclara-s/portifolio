@@ -1,0 +1,57 @@
+.header {
+    background-color:  #141c2c;
+    padding: 1rem 0;
+    border-radius: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.header-wrapped {
+    width: 100%;
+    margin: 10px auto;
+    padding: 1px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #855bb1, #3886bb);
+    background-size: 600% 600%;
+    animation: animateGradient 3s ease infinite;
+}
+
+@keyframes animateGradient {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    padding: 8px;
+}
+
+.menu a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, #855bb1, #3886bb);
+    transition: width 0.4s;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
