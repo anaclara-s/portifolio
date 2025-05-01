@@ -15,7 +15,7 @@ const Header = () => {
                 <nav className='menu'>
                     <Link to="/">Início</Link>
                     <Link to="/sobre">Sobre mim</Link>
-                    <Link to="/habilidades">Skills</Link>
+                    <Link to="/habilidades">Habilidades</Link>
                     <Link to="/projetos">Projetos</Link>
                     <Link to="/contato">Contato</Link>
                 </nav>
