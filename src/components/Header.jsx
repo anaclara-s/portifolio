@@ -8,7 +8,7 @@ const Header = () => {
         <div className='header-wrapped'>
             <header className="header">
                 <div className="left-section">
-                    <FaCode className="icon" />
+                    <FaCode className="icon-header" />
                     <span className="brand">Ana.dev</span>
                 </div>
 
@@ -22,10 +22,10 @@ const Header = () => {
 
                 <div className="right-section">
                     <a href="https://www.linkedin.com/in/anaclaradev/" target="_blank" rel="noopener nereferrer">
-                        <FaLinkedin className="icon" />
+                        <FaLinkedin className="icon-header" />
                     </a>
                     <a href="https://github.com/anaclara-s" target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="icon" />
+                        <FaGithub className="icon-header" />
                     </a>
                 </div>
             </header>
