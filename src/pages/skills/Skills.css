@@ -1,11 +1,12 @@
 .skills-container {
     padding: 4rem;
-    background: linear-gradient(135deg, #141c2c 0%, #1d2a42 100%);
+    /* background: linear-gradient(135deg, #141c2c 0%, #1d2a42 100%); */
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
     color: white;
     position: relative;
     overflow: hidden;
+    height: 90vh;
 }
 
 .title {
@@ -62,14 +63,14 @@
   }
   
   .icon-wrapper .icon {
-    font-size: 2rem;  /* Altere o tamanho do ícone */
-    color: white;     /* Cor do ícone */
+    font-size: 2rem;  
+    color: white;     
     transition: transform 0.3s, color 0.3s;
   }
   
   .icon-wrapper:hover .icon {
     transform: scale(1.1);
-    color: #f5d742; /* Altere a cor ao passar o mouse */
+    color: #f5d742; 
   }
   
   .tooltip {

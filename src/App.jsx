@@ -1,5 +1,4 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom';
 
 import Header from "./components/Header";
 import About from "./pages/about/About";
@@ -13,13 +12,11 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<About />} />
-        <Route path="/projetos" element={<Projects />} />
-        <Route path="/habilidades" element={<Skills />} />
-        <Route path="/contato" element={<Contacts />} />
-      </Routes>
+      <div id="inicio" style={{ scrollMarginTop: "90px"}}><Home /></div>
+      <div id="sobre" style={{ scrollMarginTop: "90px"}}><About /></div>
+      <div id="habilidades" style={{ scrollMarginTop: "90px"}}><Skills /></div>
+      <div id="projetos" style={{ scrollMarginTop: "90px"}}><Projects /></div>
+      <div id="contato" style={{ scrollMarginTop: "90px"}}><Contacts /></div>
     </>
   );
 }

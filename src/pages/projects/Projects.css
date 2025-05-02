@@ -1,15 +1,17 @@
 .projects-container {
     padding: 4rem;
-    background: linear-gradient(135deg, #141c2c 0%, #1d2a42 100%);
+    /* background: linear-gradient(135deg, #141c2c 0%, #1d2a42 100%); */
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
     color: white;
     position: relative;
     overflow: hidden;
     margin: 2rem;
+    height: 90vh;
+
 }
 
-.projects-container::after {
+/* .projects-container::after {
     content: '';
     position: absolute;
     top: -50px;
@@ -18,7 +20,7 @@
     height: 150px;
     background: rgba(133, 91, 177, 0.1);
     border-radius: 50%;
-}
+} */
 
 .title-projects {
     background: linear-gradient(to right, #3886bb, #855bb1);
