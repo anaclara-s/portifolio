@@ -31,7 +31,7 @@ const Header = () => {
                     <a href="https://github.com/anaclara-s" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="icon-header" />
                     </a>
-                    <FaBars className="hamburger" onClick={toggleMenu} />
+                    <FaBars className="menu-toggle" onClick={toggleMenu} />
                 </div>
             </header>
         </div>

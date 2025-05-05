@@ -9,19 +9,19 @@ const Projects = () => {
     const [hoveredProject, setHoveredProject] = useState(null);
 
     return (
-        <div className='projects-container'>
+        <div className='projects-container'   data-aos="fade-right">
             <h2 className='title-projects'>Projetos</h2>
 
-            <div className="projects-grid">
+            <div className="projects-grid" >
                 {ProjectsImagesVideos.map(project => (
                     <div
                         key={project.id}
-                        className={`project-card ${hoveredProject === project.id ? 'hovered' : ''}`}
+                        className={`project-card ${hoveredProject === project.id ? 'hovered' : ''}` }
                         onMouseEnter={() => setHoveredProject(project.id)}
                         onMouseLeave={() => setHoveredProject(null)}
                         onClick={() => setSelectedProject(project)}
                     >
-                        <div className="project-image-container">
+                        <div className="project-image-container" >
                             <img
                                 src={`/src/assets/projects/images/${project.image}`}
                                 alt={project.title}

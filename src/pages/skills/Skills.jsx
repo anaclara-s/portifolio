@@ -4,11 +4,13 @@ import skills from './SkillsIcons';
 const Skills = () => {
     return (
         <div className="skills-container">
+
             <h2 className="title">Habilidades</h2>
             <p className="description">As habilidades, ferramentas e tecnologias que uso:</p>
-            <div className="groups">
+            
+            <div className="groups" >
                 {Object.entries(skills).map(([group, items]) => (
-                    <div className="group" key={group}>
+                    <div className="group" key={group}  data-aos="flip-right">
                         <h3>{group}</h3>
                         <div className="icons">
 
@@ -26,6 +28,7 @@ const Skills = () => {
                     </div>
                 ))}
             </div>
+
         </div>
     );
 };

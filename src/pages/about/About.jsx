@@ -5,7 +5,7 @@ import './About.css';
 const About = () => {
     return (
         <div className='about-container'>
-            <div className='about-text'>
+            <div className='about-text' data-aos="fade-right">
                 <h2>Sobre mim</h2>
                 <p>
                     Sou formada em Análise e Desenvolvimento de Sistemas pela UNA e estou em busca da minha primeira oportunidade como desenvolvedora. Atualmente trabalho de forma autônoma/freelancer como desenvolvedora e analista de softwares, tradutora de inglês e técnica de manutenção de hardware.
@@ -18,7 +18,7 @@ const About = () => {
                 </p>
             </div>
 
-            <div className="about-icons">
+            <div className="about-icons" data-aos="fade-up">
 
                 <div className="icon-block">
                     <span className="circle"></span>
