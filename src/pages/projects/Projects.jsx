@@ -1,27 +1,35 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload, } from 'react-icons/fa';
+import { FaNodeJs, FaDartLang, FaFlutter, } from "react-icons/fa6";
+import { DiPostgresql } from "react-icons/di";
+import { SiMobx } from "react-icons/si";
 
 import ProjectsImagesVideos from './ProjectsImagesVideos';
 import './Projects.css';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
-    const [hoveredProject, setHoveredProject] = useState(null);
+
+    const techIcons = {
+        "Dart": <FaDartLang />,
+        "Flutter": <FaFlutter />,
+        "Node.js": <FaNodeJs />,
+        "PostgreSQL": <DiPostgresql />,
+        "MobX": <SiMobx />,
+    };
 
     return (
-        <div className='projects-container'   data-aos="fade-right">
+        <div className='projects-container' data-aos="fade-right">
             <h2 className='title-projects'>Projetos</h2>
 
-            <div className="projects-grid" >
+            <div className="projects-grid">
                 {ProjectsImagesVideos.map(project => (
                     <div
                         key={project.id}
-                        className={`project-card ${hoveredProject === project.id ? 'hovered' : ''}` }
-                        onMouseEnter={() => setHoveredProject(project.id)}
-                        onMouseLeave={() => setHoveredProject(null)}
+                        className="project-card"
                         onClick={() => setSelectedProject(project)}
                     >
-                        <div className="project-image-container" >
+                        <div className="project-image-container">
                             <img
                                 src={`/src/assets/projects/images/${project.image}`}
                                 alt={project.title}
@@ -30,22 +38,24 @@ const Projects = () => {
                             <div className="project-overlay">
                                 <h3>{project.title}</h3>
                                 <div className="project-icons">
-                                    <FaGithub className="icon" />
-                                    <FaLinkedin className="icon" />
-                                    <FaExternalLinkAlt className="icon" />
+                                    {project.tags.map((tag, index) => (
+                                        <span key={index} className='tech-icon' title={tag}>
+                                            {techIcons[tag]}
+                                        </span>
+                                    ))}
                                 </div>
                             </div>
                         </div>
-                        {(hoveredProject === project.id) && (
-                            <div className="project-info">
-                                <h3>{project.title}</h3>
-                                <div className="project-icons">
-                                    <FaGithub className="icon" />
-                                    <FaLinkedin className="icon" />
-                                    <FaExternalLinkAlt className="icon" />
-                                </div>
+                        <div className="project-info">
+                            <h3>{project.title}</h3>
+                            <div className="project-icons">
+                                {project.tags.map((tag, index) => (
+                                    <span key={index} className='tech-icon' title={tag}>
+                                        {techIcons[tag]}
+                                    </span>
+                                ))}
                             </div>
-                        )}
+                        </div>
                     </div>
                 ))}
             </div>
@@ -65,11 +75,20 @@ const Projects = () => {
                                 </video>
                             </div>
 
-                            <div className="modal-description">
+                            <div className="modal-title">
                                 <h3>{selectedProject.title}</h3>
-                                <p>{selectedProject.description}</p>
+
+                                {Array.isArray(selectedProject.description) ? (
+                                    selectedProject.description.map((para, index) => (
+                                        <p key={index} className="project-paragraph">{para}</p>
+                                    ))
+                                ) : (
+                                    <p className="project-paragraph">{selectedProject.description}</p>
+                                )}
+
+
                                 <div className="project-tools">
-                                    <h4>Ferramentas utilizadas:</h4>
+                                    <h4>Ferramentas utilizadas</h4>
                                     <ul>
                                         {selectedProject.tags.map((tag, index) => (
                                             <li key={index}>{tag}</li>
@@ -78,7 +97,6 @@ const Projects = () => {
                                 </div>
 
                                 <div className="project-footer">
-                                    <p className="project-date">{selectedProject.date}</p>
                                     <div className="modal-links">
                                         <a href={selectedProject.links.repo} target="_blank" rel="noopener noreferrer">
                                             <button className="project-button">
@@ -88,6 +106,11 @@ const Projects = () => {
                                         <a href={selectedProject.links.linkedin} target="_blank" rel="noopener noreferrer">
                                             <button className="project-button">
                                                 <FaLinkedin />Linkedin
+                                            </button>
+                                        </a>
+                                        <a href={selectedProject.links.apk} target="_blank" rel="noopener noreferrer">
+                                            <button className="project-button">
+                                                <FaFileDownload />APK
                                             </button>
                                         </a>
                                     </div>

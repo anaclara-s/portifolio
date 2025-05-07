@@ -1,26 +1,12 @@
 .projects-container {
     padding: 4rem;
-    /* background: linear-gradient(135deg, #141c2c 0%, #1d2a42 100%); */
     border-radius: 20px;
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
     color: white;
     position: relative;
     overflow: hidden;
     margin: 2rem;
     height: 90vh;
-
 }
-
-/* .projects-container::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 150px;
-    height: 150px;
-    background: rgba(133, 91, 177, 0.1);
-    border-radius: 50%;
-} */
 
 .title-projects {
     background: linear-gradient(to right, #3886bb, #855bb1);
@@ -42,18 +28,14 @@
 }
 
 .project-card {
-    background: #1d2a42;
+    background: #1e1e36;
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.438);
+    position: relative;
 }
-
-/* .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-} */
 
 .project-image-container {
     position: relative;
@@ -75,12 +57,16 @@
 
 .project-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
@@ -90,51 +76,62 @@
 .project-overlay h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: rgb(9, 255, 0);
+    color: white;
 }
 
 .project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(30, 30, 54, 0.9);
     padding: 1rem;
     text-align: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-    height: 0;
-    overflow: hidden;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 2;
 }
 
-.project-card.hovered .project-info {
-    opacity: 1;
-    height: auto;
-    padding: 1rem;
+.project-card:hover .project-info {
+    transform: translateY(0);
 }
-
-/* .project-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: white;
-} */
 
 .project-icons {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    
 }
 
-.project-icons .icon {
-    color: #3886bb;
-    font-size: 1.5rem;
-    /* background: #855bb1; */
-    width: 40px;
-    height: 40px;
-    /* border-radius: 50%; */
+.tech-icon {
+    background-color: rgba(133, 91, 177, 0.795); /* Cor de fundo do círculo */
+    color: #c1b1d3; /* Cor do ícone */
+    font-size: 1.2rem; /* Tamanho do ícone */
+    width: 40px; /* Largura do círculo */
+    height: 40px; /* Altura do círculo */
+    border-radius: 50%; /* Isso cria o círculo */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-}
+    margin: 0.2rem;
+  }
+  
+  .tech-icon:hover {
+    background-color: rgba(133, 91, 177, 0.4); /* Cor mais forte ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    color: #b38ad6; /* Cor do ícone ao passar o mouse */
+  }
 
-/* .project-icons .icon:hover {
-    transform: scale(1.1);
+/* .project-icons .icon {
+    color: #855bb1;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 } */
 
 
@@ -145,16 +142,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(201, 4, 4, 0.8);
+    background: rgba(0, 0, 0, 0.356);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    padding: 2rem;
+    padding: 15rem;
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #141c2c 0%, #0056f7 100%);
+    background: linear-gradient(135deg, #141c2c 0%, #1d2a42 100%);
     border-radius: 20px;
     max-width: 1000px;
     width: 100%;
@@ -171,8 +168,8 @@
     right: 1rem;
     background: none;
     border: none;
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
+    color: white;
+    font-size: 22px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -188,23 +185,6 @@
     margin-top: 1rem;
 }
 
-/* .modal-video-container {
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .modal-video {
-    width: 100%;
-    margin-bottom: 1rem;
-} */
-
-/* .modal-video-wrapper {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-} */
-
 .modal-links {
     display: flex;
     gap: 0.5rem;
@@ -216,42 +196,25 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(to right, #3886bb, #02ff57);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
 .project-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* .modal-description {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-} */
-
-.modal-description h3 {
-    font-size: 1.8rem;
-    background: linear-gradient(to right, #3886bb, #855bb1);
+.modal-title h3 {
+    font-size: 20px;
+    background: rgb(222, 174, 253);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+}
+
+.project-paragraph {
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: white;
 }
 
 .project-tools ul {
@@ -260,6 +223,8 @@
     gap: 0.5rem;
     list-style: none;
     padding: 0;
+    margin-top: 0.5rem;
+    padding-bottom: 10px;
 }
 
 .project-tools li {
@@ -269,17 +234,22 @@
     font-size: 0.9rem;
 }
 
-/* .project-date-and-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: auto;
-} */
+.project-tools h4 {
+    text-align: center;
+    font-size: large;
+    font-weight: normal; 
+}
 
-.project-date {
-    color: #ff0000;
-    font-size: 0.9rem;
-    margin: 0;
+.project-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #855bb1, #685be2);
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
