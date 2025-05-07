@@ -104,12 +104,12 @@
 }
 
 .tech-icon {
-    background-color: rgba(133, 91, 177, 0.795); /* Cor de fundo do círculo */
-    color: #c1b1d3; /* Cor do ícone */
-    font-size: 1.2rem; /* Tamanho do ícone */
-    width: 40px; /* Largura do círculo */
-    height: 40px; /* Altura do círculo */
-    border-radius: 50%; /* Isso cria o círculo */
+    background-color: rgba(133, 91, 177, 0.795); 
+    color: #c1b1d3; 
+    font-size: 1.2rem; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,23 +117,6 @@
     margin: 0.2rem;
   }
   
-  .tech-icon:hover {
-    background-color: rgba(133, 91, 177, 0.4); /* Cor mais forte ao passar o mouse */
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    color: #b38ad6; /* Cor do ícone ao passar o mouse */
-  }
-
-/* .project-icons .icon {
-    color: #855bb1;
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-} */
-
 
 /* janela */
 .project-modal {
