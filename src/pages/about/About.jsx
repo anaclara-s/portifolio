@@ -11,7 +11,7 @@ const About = () => {
                     Sou formada em Análise e Desenvolvimento de Sistemas pela UNA e estou em busca da minha primeira oportunidade como desenvolvedora. Atualmente trabalho de forma autônoma/freelancer como desenvolvedora e analista de softwares, tradutora de inglês e técnica de manutenção de hardware.
                 </p>
                 <p>
-                    Tenho experiência prática com desenvolvimento mobile, especialmente utilizando Dart/Flutter e Kotlin, em desenvolvimento web com React, CSS, HTML, JavaScript, além de conhecimentos sólidos em SQL, MySQL e Firebase.
+                    Tenho experiência prática com desenvolvimento mobile, especialmente utilizando Dart/Flutter e Kotlin, em desenvolvimento web com React, CSS, HTML, JavaScript, além de conhecimentos sólidos em SQL, MySQL, PostgreSQL e Firebase.
                 </p>
                 <p>
                     Estou comprometida em evoluir constantemente, aprender novas tecnologias e contribuir com soluções eficientes para os desafios do time. Meu foco é atuar como desenvolvedora mobile ou full stack em ambientes colaborativos e de constante aprendizado.
