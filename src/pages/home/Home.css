@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 4rem;
-    height: 90vh;
+    height: 80vh;
 }
 
 .intro-text {
@@ -15,7 +15,7 @@
 
 .typing-text {
     font-size: 2rem;
-    background: linear-gradient(90deg,  #3886bb, #855bb1);
+    background: linear-gradient(90deg, #3886bb, #855bb1);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -24,13 +24,39 @@
     border-right: 2px solid #855bb1;
     width: 0;
     animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+    max-width: 100%;
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 26ch; }
+    to { width: 21ch; }
 }
 
 @keyframes blink {
-    50% { border-color: transparent; }
+    50% {border-color: transparent;}
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+    }
+
+    .typing-text {
+        font-size: 1.5rem;
+        border-right: 1px solid #855bb1;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 22ch; }
+    }
 }
