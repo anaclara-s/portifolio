@@ -10,7 +10,7 @@ const ProjectModal = ({ project, onClose }) => {
           <div className="modal-video">
             <video controls>
               <source
-                src={`/src/assets/projects/videos/${project.video}`}
+                src={project.video}
                 type="video/mp4"
               />
               Seu navegador não suporta vídeos HTML5.

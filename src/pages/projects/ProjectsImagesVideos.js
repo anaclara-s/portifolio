@@ -7,8 +7,8 @@ const ProjectsImagesVideos = [
             "Foi um projeto completo onde apliquei e integrei diversas tecnologias, criando o front-end, API e banco de dados do zero. Aprendi muito sobre boas práticas de desenvolvimento e organização de código durante todo o processo.",
         ],
         tags: ["Dart", "Flutter", "Node.js", "PostgreSQL"],
-        image: "image_timecheck.jpg",
-        video: "video_timecheck.mp4",
+        image: "/projects/images/image_timecheck.jpg",
+        video: "/projects/videos/video_timecheck.mp4",
         links: {
             repo: "https://github.com/anaclara-s/timecheck",
             linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7320911849657409537/",
@@ -24,8 +24,8 @@ const ProjectsImagesVideos = [
             "Projeto totalmente construído usando Dart, framework Flutter, biblioteca Mobx e o pacote SharedPreferences.",
         ],
         tags: ["Dart", "Flutter", "MobX"],
-        image: "image_todolist.jpg",
-        video: "video_todolist.mp4",
+        image: "/projects/images/image_todolist.jpg",
+        video: "/projects/videos/video_todolist.mp4",
         links: {
             repo: "https://github.com/anaclara-s/ToDoList",
             linkedin: "https://www.linkedin.com/in/anaclaradev/",
@@ -42,8 +42,8 @@ const ProjectsImagesVideos = [
             "Projeto totalmente construído usando Dart e o framework Flutter.",
         ],
         tags: ["Dart", "Flutter",],
-        image: "image_pptls.png",
-        video: "video_pptls.mp4",
+        image: "/projects/images/image_pptls.png",
+        video: "/projects/videos/video_pptls.mp4",
         links: {
             repo: "https://github.com/anaclara-s/pedra-papel-tesoura-lagarto-spock",
             linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7224028569549565953/",

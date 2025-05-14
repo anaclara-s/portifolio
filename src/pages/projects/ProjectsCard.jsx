@@ -5,7 +5,7 @@ const ProjectCard = ({ project, onClick }) => {
     <div className="project-card" onClick={onClick}>
       <div className="project-image-container">
         <img
-          src={`/src/assets/projects/images/${project.image}`}
+          src={project.image}
           alt={project.title}
           className="project-image"
         />
