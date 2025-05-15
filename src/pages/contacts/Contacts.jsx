@@ -1,6 +1,6 @@
 import './Contacts.css';
 
-import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 
@@ -19,17 +19,6 @@ const Contact = () => {
                         </a>
                         <p className="icon-label">Email</p>
                         <p className="icon-contact">acsantos.amorin@gmail.com</p>
-                    </div>
-
-                    <div className="icon-item">
-                        <div className="icon-circle">
-                            <a href="https://wa.me/5531996553517" target="_blank" rel="noopener noreferrer" className="icon-circle">
-                                <FaWhatsapp className="icon" />
-                            </a>
-
-                        </div>
-                        <p className="icon-label">Telefone</p>
-                        <p className="icon-contact">(31) 9 9655-3517</p>
                     </div>
 
                     <div className="icon-item">
