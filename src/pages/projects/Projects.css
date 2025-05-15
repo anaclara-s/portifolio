@@ -148,10 +148,10 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: none;
+    background: rgba(109, 95, 160, 0.37);
     border: none;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -197,6 +197,10 @@
     margin-bottom: 1rem;
     line-height: 1.6;
     color: white;
+    flex: 1;
+    margin: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-tools ul {
